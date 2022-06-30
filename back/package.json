@@ -1,0 +1,58 @@
+{
+  "name": "spaceship-trip-back",
+  "version": "1.0.0",
+  "description": "Spaceship Travel Challenge",
+  "author": "Marc Benito Pujante",
+  "license": "none",
+  "bin": {
+    "give-me-the-odds": "dist/cli.js"
+  },
+  "scripts": {
+    "start": "npm run build && NODE_ENV=production node dist/server.js",
+    "dev": "NODE_ENV=development nodemon",
+    "build": "tsc && tsc-alias && cp universe.db dist && cp spaceship-trip.json dist",
+    "test": "jest  --watch --coverage ",
+    "lint": "eslint --ignore-path .gitignore --ext .ts src/"
+  },
+  "dependencies": {
+    "class-validator": "~0.13.1",
+    "compression": "~1.7.4",
+    "cors": "~2.8.5",
+    "express": "~4.17.1",
+    "formidable": "~2.0.1",
+    "helmet": "~4.6.0",
+    "knex": "~0.21.19",
+    "morgan": "~1.10.0",
+    "sqlite3": "~5.0.8",
+    "winston": "~3.3.3",
+    "winston-daily-rotate-file": "~4.5.5"
+  },
+  "devDependencies": {
+    "@types/compression": "~1.7.1",
+    "@types/cors": "~2.8.11",
+    "@types/express": "~4.17.13",
+    "@types/jest": "27.4.x",
+    "@types/knex": "~0.16.1",
+    "@types/morgan": "~1.9.3",
+    "@types/node": "~16.0.1",
+    "@types/supertest": "~2.0.12",
+    "@typescript-eslint/eslint-plugin": "~5.30.0",
+    "@typescript-eslint/parser": "~5.30.0",
+    "eslint": "~7.30.0",
+    "eslint-config-prettier": "~8.3.0",
+    "eslint-plugin-prettier": "~3.4.0",
+    "jest": "27.4.x",
+    "mock-express-request": "~0.2.2",
+    "node-config": "0.0.2",
+    "node-gyp": "~8.1.0",
+    "nodemon": "~2.0.9",
+    "pm2": "~5.1.0",
+    "prettier": "~2.3.2",
+    "supertest": "~6.2.2",
+    "ts-jest": "~27.1.5",
+    "ts-node": "~10.4.0",
+    "tsc-alias": "~1.4.1",
+    "tsconfig-paths": "~3.10.1",
+    "typescript": "~4.7.4"
+  }
+}
